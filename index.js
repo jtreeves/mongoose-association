@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 
 const db = require('./models/blog.js')
 
+mongoose.connect('mongodb://127.0.0.1:27017/mongooseAssociation')
+
 app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
