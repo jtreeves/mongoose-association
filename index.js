@@ -33,6 +33,7 @@ app.get('/blog', (req, res) => {
         body: 'Software engineers are cool.'
     })
     post1.save()
+    res.send('Post completed')
 })
 
 const PORT = process.env.PORT || 3000
