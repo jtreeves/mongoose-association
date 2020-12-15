@@ -26,8 +26,13 @@ app.get('/', (req, res) => {
 app.get('/blog', (req, res) => {
     BlogPost.create({
         title: 'Mongoose for all Mongoose',
-        body: 'This is a cool blog post'
+        body: 'This is a cool blog post.'
     })
+    const post1 = new BlogPost({
+        title: 'SEI 1019',
+        body: 'Software engineers are cool.'
+    })
+    post1.save()
 })
 
 const PORT = process.env.PORT || 3000
