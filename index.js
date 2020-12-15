@@ -3,6 +3,8 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
+const db = require('./models/blog.js')
+
 app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
