@@ -11,3 +11,7 @@ const blogPostSchema = new mongoose.Schema({
     body: String,
     comments: [commentSchema]
 })
+
+const BlogPost = mongoose.model('BlogPost', blogPostSchema)
+
+module.export = BlogPost
