@@ -5,3 +5,9 @@ const commentSchema = new mongoose.Schema({
     content: String,
     date: Date
 })
+
+const blogPostSchema = new mongoose.Schema({
+    title: String,
+    body: String,
+    comments: [commentSchema]
+})
