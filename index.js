@@ -3,9 +3,11 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-const db = require('./models/blog.js')
+const BlogPost = require('./models/blog.js')
 
-mongoose.connect('mongodb://127.0.0.1:27017/mongooseAssociation')
+mongoose.connect('mongodb://localhost/mongooseAssociation')
+
+const db = mongoose.connection
 
 app.use(express.urlencoded({extended: false}))
 
